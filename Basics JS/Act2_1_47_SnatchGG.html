@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.47
+    Escribir un programa para determinar si un número n es primo (un número primo sólo es divisible
+    por el mismo y por la unidad).-->   
+
+    <script>
+        let num = prompt("Introduce número");
+        let primo = true;
+
+        for (let index = 2; index < num; index++) {
+            if(num%index==0)
+                primo=false;
+        }
+
+        if(primo==false)
+            document.write("El número " + num + " no es primo");
+        else
+            document.write("El número " + num + " es primo");
+
+    </script>    
+</body>
+
+</html>

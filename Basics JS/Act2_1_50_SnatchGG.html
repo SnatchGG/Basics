@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.50
+    Haz un programa que pida un número y nos de cómo resultado el mismo número en base 16.-->   
+
+    <script>
+        let num = Number(prompt("Introduce número:"));
+        let aux;
+        let hex;
+
+        if (num >= 0 && num <= 9) {
+                document.write(num + " en hexadecimal es " + num);
+            }
+        else if (num > 9 && num <=15) {
+                switch (num) {
+                    case 10:
+                        hex = "A";
+                        document.write(num + " en hexadecimal es ");
+                        break;
+
+                    case 11:
+                        hex = "B";
+                        document.write(num + " en hexadecimal es " + hex);
+                        break;
+
+                    case 12:
+                        hex = "C";
+                        document.write(num + " en hexadecimal es " + hex);
+                        break;
+
+                    case 13:
+                        hex = "D";
+                        document.write(num + " en hexadecimal es " + hex);
+                        break;
+
+                    case 14:
+                        hex = "E";
+                        document.write(num + " en hexadecimal es " + hex);
+                        break;
+
+                    case 15:
+                        hex = "F";
+                        document.write(num + " en hexadecimal es " + hex);
+                        break;
+                }
+            }
+            
+            else if (num>15){
+                let rest = num%16
+                let hexadecimal = String(rest);
+
+                while(num>=16){
+                    num = num/16;
+                    aux = Math.floor(num%16);                    
+                    switch (aux) {
+                        case 10:
+                            aux = "A";
+                            break;
+
+                        case 11:
+                            aux = "B";
+                            break;
+
+                        case 12:
+                            aux = "C";
+                            break;
+
+                        case 13:
+                            aux = "D";
+                            break;
+
+                        case 14:
+                            aux = "E";
+                            break;
+
+                        case 15:
+                            aux = "F";
+                            break;
+                    } 
+                    hexadecimal += aux;
+                }
+
+                for(let i = hexadecimal.length; i >=0; i--){
+                    document.write(hexadecimal.charAt(i));
+                }
+            }
+    </script>    
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.36
+    Realizar un ejercicio que permita realizar la división de dos números mediante restas sucesivas,
+    mostrando el cociente y el resto.-->
+
+    <script>
+        let num1, num2, cociente=0, resto;
+
+        num1 = parseInt(prompt("Pon num1"));
+        num2 = parseInt(prompt("Pon num2"));
+
+        while(num1 >= num2){
+            num1 -= num2;
+            cociente++;
+            resto = num1;
+        }
+        
+        document.write("cociente: " + cociente + " resto: " + resto);            
+    </script>
+</body>
+
+</html>

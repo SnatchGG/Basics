@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.43
+    Hacer un programa que visualice los 10 primeros múltiplos de un número que introducimos por
+    teclado. A continuación, nos visualice la suma de todos ellos. Utilizando la sentencia for.-->   
+
+    <script>
+        let num = prompt("Pon número");
+        let sum = 0;
+
+        for (let index = 1; index <= 10; index++) {
+            document.write(index*num + "<br>");  
+            sum = sum + index*num;         
+        }
+
+        document.write("Suma de todos los múltiplos: " + sum);
+    </script>    
+</body>
+
+</html>

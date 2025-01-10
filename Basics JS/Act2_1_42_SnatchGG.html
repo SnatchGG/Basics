@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.42
+    Hacer un programa que calcule el factorial de un número utilizando la sentencia for.-->   
+
+    <script>
+        let num = prompt("Calcular el factorial de: ");
+        let fact = 1;
+
+        for (let index = 1; index <= num; index++) {
+            fact=fact*index;
+        }
+
+        document.write("Factorial de " + num + " es: " +fact);
+    </script>    
+</body>
+
+</html>

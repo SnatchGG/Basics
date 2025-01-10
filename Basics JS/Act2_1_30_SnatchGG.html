@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.30
+    Realiza un programa para que dos personas puedan jugar al Master Mind.
+    Primeramente, el ordenador pedirá una combinación secreta que consistirá en 4 números y que
+    tecleará una de las personas. Después, la otra persona deberá adivinar dicha combinación secreta
+    para lo que dispondrá como máximo de 8 intentos. Cada intento consistirá en escribir 4 números,
+    tras lo cual el ordenador escribirá el número de muertos y de heridos.
+    1. Un número está muerto si coincide en valor y en posición con la combinación secreta.
+    2. Un número está herido si coincide en valor, pero no en posición con la combinación secreta.
+    Por ejemplo: si la combinación secreta es (5 3 1 2), en el intento (5 1 4 4) hay 1 muerto (el 5) y un
+    herido (el 1). Según esta definición en el intento (5 1 1 2) habría 3 muertos (el 5, el segundo 1 y el 2)
+    y 1 herido (el primer 1). El programa terminará por una de las dos siguientes situaciones: a) el
+    jugador ha acertado la combinación escrita por el otro o b) se ha llegado a 8 intentos sin acertarla.-->
+
+    <script>
+        let combinacion = prompt("Jugador 1 introduce combinación secreta de 4 cifras:");
+        let cont = 1;    
+        let herido = false;
+        do{
+            alert("Intento " + cont);
+            let intento = prompt("Jugador 2 intenta un número de 4 cifras:");
+            
+            if(intento == combinacion){
+                    alert("Has acertado!!!");
+                    cont=9;
+            }
+            else{
+                for (let index1 = 0; index1 < 4; index1++) {
+                    for (let index2 = 0; index2 < 4; index2++) {
+                        if(intento.charAt(index1) == combinacion.charAt(index2)){
+                            if(index2 == index1){
+                                alert("El número " + intento.charAt(index1) + " está muerto en la posición " + (index2+1));
+                            }
+                            else if(herido!=true){
+                                alert("El número " + intento.charAt(index1) + " está herido");
+                                herido = true;
+                            }
+                        }
+                        herido = false;
+                    }
+                }
+            }
+
+            cont++;
+        }   
+        while (cont<=8);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.46
+    Hacer un programa que visualice y sume la serie de números 3, 6, 9, 12, ..., 99.-->   
+
+    <script>
+        let num = 3;
+        let sum = 0;
+
+        while(num<=99){
+            document.write(num + " ");
+            sum+=num;
+            num+=3;            
+        }
+
+        document.write("<br> La suma es: " + sum);
+    </script>    
+</body>
+
+</html>

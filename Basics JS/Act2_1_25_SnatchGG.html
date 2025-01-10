@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.25
+    Escribir un algoritmo que permita jugar a doble o nada: El jugador apuesta una cantidad y tira una
+    moneda (aleatoriamente). Si sale cara obtiene el doble de la cantidad apostada. Si sale cruz lo pierde
+    todo-->
+
+    <script>
+        let apuesta = prompt("Introduce cantidad a apostar:");
+
+        function tirarMoneda() {
+            var moneda = parseInt(Math.random()*2);
+            if(moneda%2==0){                
+                apuesta*=2;
+                alert("Cara. Has ganado el doble, saldo: " + apuesta);
+            }
+            else {
+                apuesta=0;
+                alert("Cruz. Has perdido todo, saldo: " + apuesta);
+            }
+                
+        }
+        alert("Tirando moneda...");
+        tirarMoneda();
+    </script>
+</body>
+
+</html>

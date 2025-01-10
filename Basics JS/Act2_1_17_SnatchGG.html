@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.17
+    Realiza un ejercicio que haga lo siguiente:
+    1. Se teclearán dos números enteros por pantalla hasta que los dos sean menores que 50.
+    2. El más pequeño se irá incrementando de 5 en 5 y el más grande se decrementará de 2 en 2, se
+    irán imprimiendo a la vez que se van generando. El programa terminará cuando los valores
+    se crucen-->
+
+    <script>
+        let a,b;
+        let cruce = false;
+        do{
+            a=parseInt(prompt("introduce num 1"));
+            b=parseInt(prompt("introduce num 2"));
+        }
+
+        while(a > 50 || b > 50);
+
+        do{
+            if(a<b){
+                while(a<=b){
+                document.write("Numero a= " + a + " _______ " + "Numero b= " + b + "<br>");
+                a+=5;
+                b+=2;
+                }                
+            }
+
+            else if(a>b){
+                while(a>=b){
+                document.write("Numero b= " + b + " _______ " + "Numero a= " + a + "<br>");
+                a+=2;
+                b+=5;    
+                }
+            }
+            cruce = true;
+        }       
+        while (cruce == false);
+    </script>
+</body>
+
+</html>

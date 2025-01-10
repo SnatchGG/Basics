@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.51
+Haz un programa que nos pida un número en base 8 y nos de cómo resultado el número en base
+decimal y en base 2.-->   
+
+    <script>
+        let num = prompt("Introduce número");
+        let aux;
+        let sum = 0;
+        let cont=0;
+
+        //document.write(parseInt(num, 8));
+
+        document.write(num + " DE OCTAL A DECIMAL: <br>");
+        for (let index = num.length-1; index >= 0; index--) {
+            aux = Math.pow(8, cont)
+            document.write("8 elevado a " + cont + " = " + aux + "<br>");
+
+            sum += parseInt(num[index])*aux;
+            document.write(parseInt(num[index]) + " * " + aux + "<br><br>");
+            cont++;
+        }
+        
+            document.write("Suma = " + sum + "<br><br>");
+        
+         document.write(num + " DE OCTAL A BINARIO: <br>");
+         for (let index = 0; index < num.length; index++) {
+            
+            switch(num[index]){
+                case "0":
+                    document.write("000 ");
+                    break;
+                case "1":
+                    document.write("001 ");
+                    break;
+                case "2":
+                    document.write("010 ");
+                    break;
+                case "3":
+                    document.write("011 ");
+                    break;
+                case "4":
+                    document.write("100 ");
+                    break;
+                case "5":
+                    document.write("101 ");
+                    break;
+                case "6":
+                    document.write("110 ");
+                    break;
+                case "7":
+                    document.write("111 ");
+                    break;
+             }
+         }
+    </script>    
+</body>
+
+</html>

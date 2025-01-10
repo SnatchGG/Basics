@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Leer 3 números (día, mes y año) y decir si corresponde a una fecha correcta. Un año es bisiesto si es
+    divisible por 4 excepto si acaba en 00 en cuyo caso es bisiesto sólo si es divisible por 400-->
+
+    <script>
+        let dia, mes, año;
+
+      
+        dia = parseInt(prompt("Pon dia"));
+        mes = parseInt(prompt("Pon mes")-1);
+        año = parseInt(prompt("pon año"));
+        
+
+        if(dia>0 && dia<32){
+            if(mes>=1 && mes<12){
+                if(año>0){
+                    if(mes==1 && dia>28){
+                        if((año%4==0 && año%100!=0) || año%400==0){
+                            alert (new Date(año, mes, "29").toLocaleDateString("es-ES",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                        }
+                    }
+                    else {
+                        alert (new Date(año, mes, dia).toLocaleDateString("es-ES",{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+                    }                    
+                }                
+            }            
+        }            
+    </script>
+</body>
+
+</html>

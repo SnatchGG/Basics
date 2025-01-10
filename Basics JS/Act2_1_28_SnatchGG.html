@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.28
+    Dadas tres variables enteras (v1, v2 y v3) escribir condiciones que expresen lo siguiente:
+    Todas las variables son cero.
+    Todas las variables son positivas.
+    Todas las variables tienen el mismo signo.
+    Todos sus valores son distintos.
+    Dos de sus valores coinciden.
+    Como máximo dos de sus valores coinciden.
+    El valor de v2 está comprendido entre los de v1 y v3.-->
+
+    <script>   
+        let v1,v2,v3;
+
+        if(v1==0 && v2==0 && v3==0){
+            alert("Todas son 0");
+        }
+
+
+        if(v1>0 && v2>0 && v3>0){
+            alert("Todas son positivas");
+        }
+
+
+        if(v1>0 && v2>0 && v3>0) {
+            alert("Todas tienen signo +");
+        }
+        else if(v1<0 && v2<0 && v3<0)
+            alert("Todas tienen signo -");
+
+
+        if(v1!=v2){
+            if(v1!=v3){
+                if(v2!=v3){
+                    alert("Todos son distintos");
+                }
+            }
+        }
+
+
+        if(v1==v2 && v2==v3){
+            alert("Todos son iguales");
+        }
+        else if(v1==v2){
+            alert("v1 y v2 son iguales");
+        }
+        else if(v2==v3){
+            alert("v2 y v3 son iguales")
+        }
+        else if(v1==v3){
+            alert("v2 y v3 son iguales")
+        }
+
+
+        if(v1==v2){
+            alert("v1 y v2 son iguales");
+        }
+        else if(v1==v3){
+            alert("v1 y v3 son iguales");
+        }
+        else if(v2==v3){
+            alert("v2 y v3 son iguales")
+        }
+        
+
+        if(v2>v1 && v2<v3){
+            alert("v2 está entre v1 y v3");
+        }
+
+    </script>
+</body>
+
+</html>

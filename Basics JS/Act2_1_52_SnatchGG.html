@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.52
+    Haz un programa que nos pida un número entero, y también nos pida la base. El programa tiene
+    que dar como resultado (mediante una función) el número en la base deseada.-->   
+
+    <script>
+        let num = Number(prompt("Introduce número:"));
+        let base = Number(prompt("Pon la base:"));
+        
+
+        const resultado=function(num,base){
+            return num.toString(base);
+        }
+
+        document.write(num + " en base " + base + " es = " + resultado(num, base));
+
+    </script>    
+</body>
+
+</html>

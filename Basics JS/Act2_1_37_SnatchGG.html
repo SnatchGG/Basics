@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.37
+    Escribir un programa donde el usuario elija entre lo siguiente
+    Pulse 1 si desea cenar Costilla
+    Pulse 2 si desea cenar Pescado
+    Y luego se le pregunte también si desea o no postre
+        
+        Usar las funciones: prompt y confirm para pedir los datos
+    Si eligió cenar Costilla->pago 23 €
+    Si eligió cenar Pescado->pago 15 €
+    Si tomo postre->el postre valió 3 €
+    Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario,
+    incluyendo una propina del 6%-->
+
+    <script>    
+        let num = parseInt(prompt("Pulse 1 si desea cenar Costilla \nPulse 2 si desea cenar Pescado"));
+        let postre = confirm("¿Quieres postre o no?");
+        let total, pago;
+
+        switch (num) {
+            case 1:
+                pago = 23
+                break;
+
+            case 2:
+                pago = 15
+                break;
+        
+            default:
+                document.write("Número incorrecto.");
+                break;
+        }
+
+        if(postre){
+            total = pago + 3;
+            total += total*0.06;
+            alert("El total es: " + total);
+        }
+        else{
+            total=pago;
+            total += total*0.06;
+            alert("El total es: " + total);
+        }
+    </script>
+</body>
+
+</html>

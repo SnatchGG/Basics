@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.33
+    Hacer un programa que pida por teclado un número cualquiera, y si el número es menor que 0, de
+    un mensaje de alerta de numero invalido. Si no, que escriba por pantalla los siguientes valores o
+    soluciones, utilizando variables auxiliares (solucion1, solucion2, ...) para cada apartado:
+    1. La respuesta a número*2+1/3 –7 es: solucion1
+    2. La respuesta a número+2 es: solucion2
+    3. La respuesta a número * 2.5 es: solucion3
+    4. “Fin de operación con el número: numero”-->
+
+    <script>
+        let numPedido, solucion1, solucion2, solucion3;
+        
+        numPedido = parseInt(prompt("Pon num mayor o igual que 0"));
+
+        solucion1 = numPedido*2+1/3-7;
+        solucion2 = numPedido+2;
+        solucion3 = numPedido*2.5;
+
+        if (numPedido < 0) {
+            alert("Número inválido");
+        }
+        else {
+            document.write("La respuesta a " + numPedido + "*2+1/3-7 es: " + solucion1 + "<br>");
+            document.write("La respuesta a " + numPedido + "+2 es: " + solucion2 + "<br>");
+            document.write("La respuesta a " + numPedido + "* 2.5 es: " + solucion3 + "<br>");
+            document.write("Fin de operación con el número: " + numPedido);
+        }    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.41
+    Hacer un programa que visualice todos los múltiplos de 11 menores de 300. A continuación que nos
+    de la suma de todos ellos-->
+
+    <script>
+        let resultado = 0;
+        let sum = 0;
+        let cont = 1;
+
+        while(resultado<300){
+            resultado = 11*cont;
+            if(resultado<300){
+                sum=sum+resultado;
+                document.write(resultado +"<br>");
+            }
+            cont++;
+        }
+
+        document.write("Suma = " + sum);        
+    </script>
+</body>
+
+</html>

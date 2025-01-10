@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.23
+    Calcula cuantos números pares hay entre dos introducidos-->
+
+    <script>
+        let a = parseInt(prompt("num 1:"));
+        let b = parseInt(prompt("num 2:"));
+        let cont = 0;
+
+        for (let index = a; index <= b; index++) {
+            if(index%2==0){
+                cont++;
+                document.write(index + "<br>");
+            }        
+        }
+
+        alert("Hay " + cont + " pares.")
+    </script>
+</body>
+
+</html>

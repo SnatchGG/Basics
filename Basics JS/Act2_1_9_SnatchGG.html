@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Ejercicio 2.9
+    Teniendo la variable primer_saludo = “hola”
+    Y la variable segundo_saludo = primer_saludo
+    Si ahora, le asignásemos un nuevo valor a primer_saludo =”hello”
+    ¿Qué valor tendría segundo_saludo?-->
+
+    <script>
+        let primer_saludo = "hola";
+        let segundo_saludo = primer_saludo;
+        primer_saludo = "hello";
+
+        document.write(segundo_saludo); //El resultado es "hola" porque no se hace una nueva asginación con el nuevo valor de primer_saludo.
+    </script>
+</body>
+</html>

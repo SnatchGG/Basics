@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.21
+    Supongamos que nos preguntan qué porcentaje de hombres y qué porcentaje de mujeres hay un
+    salón de clases. Lo primero que tenemos que hacer es preguntar el total de personas que hay,
+    luego hacer un ciclo que en cada iteración pregunte el sexo de cada alumno. En base a esos datos se
+    calculan los porcentajes.-->
+
+    <script>
+        let total = parseInt(prompt("¿Cuántas personas hay?"));
+        let mujer = 0;
+        let hombre = 0;
+        let porcentajeMujeres = 0;
+
+        for (let index = 0; index < total; index++) {
+            let respuesta = prompt("La persona " + index + " es (mujer,hombre):");          
+            if (respuesta=="mujer")
+                mujer++;
+            else if (respuesta=="hombre")
+                hombre++;
+        }
+
+        //Se pueden calcular ambos porcentajes o solo 1.
+        
+        document.write("Hay " + total + " personas<br>");
+        porcentajeMujeres = mujer * 100 / total;
+        document.write("Hay un " + porcentajeMujeres + "% de mujeres<br>");
+        document.write("Hay un " + (100 - porcentajeMujeres) + "% de hombres<br>");
+    </script>
+</body>
+
+</html>

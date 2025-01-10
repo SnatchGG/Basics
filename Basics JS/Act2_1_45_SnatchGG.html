@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.45
+    Hacer un programa que solicite y visualice una serie de números distintos de cero. El programa
+    debe terminar cuando introduzcamos el valor cero que no se debe visualizar. Finalmente se desea
+    obtener la cantidad de valores leídos distintos de cero.-->   
+
+    <script>
+        let num;
+        let cont=0;
+
+        do{
+            num = prompt("introduce número"); 
+            if(num!=0){
+                alert("número introducido: " + num);
+                cont++;
+            }
+        }
+        while(num!=0);
+        
+        alert("Se han leído " + cont + " números");
+    </script>    
+</body>
+
+</html>

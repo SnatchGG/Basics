@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Ejercicio 2.35
+    Realizar un ejercicio que permita realizar la multiplicación de dos números mediante sumas
+    sucesivas.-->
+
+    <script>
+        let num1, num2, resultado=0;
+
+        num1 = parseInt(prompt("Introduce num1:"));
+        num2 = parseInt(prompt("Introduce num2:"));
+
+        for (let index = 0; index < num1; index++) {
+            resultado += num2;
+        }
+        
+        document.write(num1 + " * " + num2 + " = " + resultado);
+    </script>
+</body>
+
+</html>
